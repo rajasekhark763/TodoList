@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% extends 'todoapp/base.html'%}
+    {%block body_block%}
+      <h1>Todos List </h1><br><br><br>
+      {% for todo in todo_list%}
+        <h2><a href="/{{todo.id}}">{{todo.title}}</a></h2>
+      {%endfor%}
+      <a href="/create" class="btn btn-lg btn-primary" value="">Add New Todo</a>
+    {%endblock%}
